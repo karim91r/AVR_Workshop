@@ -16,7 +16,7 @@ ISR(INT2_vect)
 }
 
 
-void INT0_init(void)
+void INT2_init(void)
 {
   DDRB &=~(1<<2);
   GICR |=(1<<5);
@@ -25,7 +25,7 @@ void INT0_init(void)
 }
 int main(void)
 {
-  INT0_init();
+  INT2_init();
   DDRC |=0x0F;
   PORTC &=0xF0;
   while(1)
